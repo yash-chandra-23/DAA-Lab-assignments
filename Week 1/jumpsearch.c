@@ -6,6 +6,7 @@ int jumpSearch(int array[], int size, int key)
 {
    int start = 0;
    int end = sqrt(size); 
+   int comp=0;
 
    while(array[end] <= key && end < size) 
    {
@@ -18,30 +19,39 @@ int jumpSearch(int array[], int size, int key)
    for(int i = start; i<end; i++) 
    { 
       if(array[i] == key)
-         return i; 
+      {
+          comp++;
+          printf("Element present and comparison is = %d \n ",comp);
+      }
+      else
+      {
+          comp++;
+           printf("not present and comparison = %d \n",comp);
+      }
+        
    }
-   return -1;
+  
 }
 
 int main()
 {
-   int n, searchKey, loc,arr[SIZE];
-   printf("Enter the number of elements you want \n");
-   scanf("%d",&n);
-   printf("Enter the elements of the array in sorted way \n");
-   for(int i = 0; i< n; i++) 
+    
+   int n, searchKey, test,arr[SIZE];
+   printf("Enter the number of test cases you want to try \n");
+   scanf("%d",&test);
+   for(int k=0;k<test;k++)
    {
-      scanf("%d",&arr[i]);
-   }
+     printf("Enter the number of elements you want \n");
+     scanf("%d",&n);
+     printf("Enter the elements of the array in sorted way \n");
+     for(int i = 0; i< n; i++) 
+     {
+       scanf("%d",&arr[i]);
+     }
 
-   printf("Enter search key to search in the array: ");
-   scanf("%d",&searchKey);
-   if((loc = jumpSearch(arr, n, searchKey)) >= 0)
-   {
-      printf("Item found at location: %d ",loc); 
-   }
-   else
-   {
-      printf("Item is not found in the list.");
-   }
+     printf("Enter search key to search in the array: ");
+     scanf("%d",&searchKey);
+     jumpSearch(arr, n, searchKey);
+   } 
+   
 }
