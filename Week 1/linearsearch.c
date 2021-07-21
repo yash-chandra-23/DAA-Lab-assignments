@@ -1,39 +1,51 @@
-
 #include<stdio.h>
 #define SIZE 100
+int linearsearch(int arr[], int n,int m)
+{
+  int flag =0,comp=0;
+  for(int i= 0; i<n; i++)
+  {
+      if(arr[i]==m)
+      {
+          flag=1;
+          comp++;
+          break;
+      }
+      else
+      {
+          comp++;
+          
+      }
+      
+  }
+  if(flag==1)
+  {
+      printf("Element found in the array and number of comparison= %d \n", comp);
+  }
+  else
+  {
+      printf("Element not found in the aaray and number of comparison= %d \n", comp);
+  }
+}
+
 int main()
 {
-    int arr[SIZE],n,m,flag;
-    printf("Enter the size of array \n");
-    scanf("%d",&n);
-    printf("Enter the elements of the Array\n");
-    for(int i =0;i<n;i++)
+    int test,n,m,arr[SIZE];
+    printf("Enter the test case you want to test in the program \n");
+    scanf("%d",&test);
+    for(int i=0; i<n; i++)
     {
-        scanf("%d",&arr[i]);
-    }
-    printf("Entered Elements of Array are \n");
-    for (int i=0;i<n;i++)
-    {
-        printf("%d \t",arr[i]);
-    }
-    printf("\n Enter the element you want to check in the Array\n");
-    scanf("%d",&m);
-    for(int i=0;i<n;i++)
-    {
-        if(m== arr[i])
+        printf("Enter the number of Element you want in array \n");
+        scanf("%d",&n);
+        printf("Enter the elements of the array \n");
+        for(int k=0;k<n;k++)
         {
-            flag=1;
+            scanf("%d",&arr[k]);
         }
+        printf("Enter the Element you want search \n");
+        scanf("%d",&m);
+         linearsearch(arr,n, m);
         
     }
-    if(flag==1)
-    {
-        printf("Yes element found in Array \n ");
-    }
-    else
-    {
-       printf("No element found in Array \n");
-    }
-    
-    
+    return 0;
 }
