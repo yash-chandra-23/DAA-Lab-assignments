@@ -6,7 +6,7 @@ int main()
      int size, i, j, count,m;
      printf("Enter the test you want \n");
      scanf("%d",&test);
-     for(int j=0; j<test; j++)
+     for(int k=0; k<test; k++)
     {
         
       printf("Enter size of array: ");
