@@ -1,10 +1,13 @@
 #include <stdio.h>
 int main()
 {
-    int n, i, j, temp,comp=0,no_swap=0;
+    int n, i, j, temp,comp=0,no_swap=0,test;
     int arr[64];
- 
-    printf("Enter number of elements\n");
+    printf("Enter the test case you want \n");
+    scanf("%d",&test);
+    for(int k=0;k<test;k++)
+    {
+        printf("Enter number of elements\n");
     scanf("%d", &n);
  
     printf("Enter %d integers\n", n);
@@ -35,6 +38,7 @@ int main()
     for (i = 0; i <= n - 1; i++)
     {
         printf("%d\n", arr[i]);
+    }
     }
     return 0;
 }
