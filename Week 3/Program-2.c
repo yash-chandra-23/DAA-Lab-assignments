@@ -1,9 +1,13 @@
 #include <stdio.h>
 int main()
 {
-  int array[100], n, c, d, position, t;
-
-  printf("Enter number of elements\n");
+    int array[100], n, c, d, position, t,test;
+    
+    printf("Enter the test case you want \n");
+    scanf("%d",&test);
+    for(int k=0;k<test;k++)
+    {
+        printf("Enter number of elements\n");
   scanf("%d", &n);
 
   printf("Enter %d integers\n", n);
@@ -32,6 +36,6 @@ int main()
 
   for (c = 0; c < n; c++)
     printf("%d\n", array[c]);
-
-  return 0;
+    }
+    return 0;
 }
